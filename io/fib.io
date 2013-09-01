@@ -14,11 +14,13 @@ Fib := Object clone do(
     )
   )
 
-  loop_soluation := method(iterations,
-  )
-
-  next_generation := method(memo,first,second
-    first + second
+  loop_solution := method(iterations,
+    Range 2 to(iterations) asList reduce(
+      memo,
+      item,
+      memo append(memo at(item-1) + memo at(item-2)),
+      list(0,1)
+    ) at(iterations)
   )
 )
 
