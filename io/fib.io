@@ -4,8 +4,7 @@ Fib := Object clone do(
   recursive_solution := method(counter,first,second,
     if(first isNil, first = 1)
     if(second isNil, second = 1)
-
-    if(counter == 2, return first) // defaulting the first two iterations
+    if(counter == 2, return first)
 
 
     recursive_solution(counter - 1,
